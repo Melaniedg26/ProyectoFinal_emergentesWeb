@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-header d-flex align-items-center"  style="background-color: #fc9432;">
+        <img src="/public/img/imagen.png" alt="Cámara" class="camera-icon me-2">
+        <h3 class="m-0 p-2">Comparte tus reseñas de viajes!</h3>
+    </div>
+    <div class="card-body">
+        <form action="/images" method="post" enctype="multipart/form-data">
+            <div class="form-group" >
+                <div class="input-group mb-3" >
+                    <label class="input-group-text" for="inputGroupFile01"  style="background-color: #7ED856
+
+;">Sube tu mejor foto!</label>
+                    <input type="file" name="image" class="form-control" id="inputGroupFile01">
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px;">
+                <input type="text" name="title" class="form-control" placeholder="Titulo para tu imagen" required>
+            </div>
+            <div class="form-group" style="margin-top: 10px;">
+                <textarea name="description" rows="2" class="form-control" placeholder="Cuentanos tu experiencia!"
+                    required></textarea>
+            </div>
+            <div class="form-group" style="margin-top: 10px;">
+                <button class="btn" style="background-color: #fc9432;">
+                    <img src="/public/img/upload.png" alt="Cámara" class="camera-icon">
+                    Subir Publicacion
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+body{
+    background-color:#b5d6ff;
+    font-family: 'Poppins', sans-serif;
+
+}
+.navbar-custom{
+    background-color: #91dbff;
+}
+.navbar-brand img{
+    width: 70%;
+}
+.camera-icon {
+    width: 30px; 
+    height: auto; 
+  }
+
