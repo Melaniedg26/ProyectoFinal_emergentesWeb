@@ -1,0 +1,14 @@
+const mongoose=require('mongoose');
+const {Schema}=mongoose;
+const path =require('path');
+const usersSchema=new Schema({
+    username:{ type:String},
+    email:{type:String},
+    pass:{type:String}
+   
+});
+usersSchema.virtual('uniqueId')
+.get(function(){
+    return this.filename.replace(path.extname(this.filename),'')
+})
+module.exports=mongoose.model('User',usersSchema);

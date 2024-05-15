@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 const {Schema}=mongoose;
 const path =require('path');
-const ReseniaSchema=new Schema({
+const imagesSchema=new Schema({
     place:{ type:String},
     description:{type:String},
     filename:{type:String},
@@ -11,8 +11,8 @@ const ReseniaSchema=new Schema({
 
    
 });
-ReseniaSchema.virtual('uniqueId')
+imagesSchema.virtual('uniqueId')
 .get(function(){
     return this.filename.replace(path.extname(this.filename),'')
 })
-module.exports=mongoose.model('Image',ReseniaSchema);
+module.exports=mongoose.model('Image',imagesSchema);
