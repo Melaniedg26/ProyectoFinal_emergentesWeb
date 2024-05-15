@@ -1,10 +1,14 @@
 const path = require('path');
 const express = require('express');
+
 const exphbs = require('express-handlebars').create({
     defaultLayout: 'main',
     extname: '.hbs',
     layoutsDir: path.join(__dirname, '../views/layouts'),
-    partialsDir: path.join(__dirname, '../views/partials')
+    partialsDir: path.join(__dirname, '../views/partials'),
+    allowProtoPropertiesByDefault: true, // Deshabilita la comprobación de acceso al prototipo para las propiedades
+    allowProtoMethodsByDefault: true,    // Deshabilita la comprobación de acceso al prototipo para los métodos
+
 });
 
 const errorHandler = require('errorhandler');
